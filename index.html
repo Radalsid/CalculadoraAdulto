@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Profesional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="display">
+                <div class="previous-operand" id="previous-operand"></div>
+                <div class="current-operand" id="current-operand">0</div>
+            </div>
+            
+            <div class="buttons">
+                <button class="btn clear" onclick="clearAll()">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+                <button class="btn operator" onclick="deleteLast()">
+                    <i class="fas fa-backspace"></i>
+                </button>
+                <button class="btn operator" onclick="chooseOperation('÷')">÷</button>
+                <button class="btn operator" onclick="chooseOperation('×')">×</button>
+                
+                <button class="btn number" onclick="appendNumber('7')">7</button>
+                <button class="btn number" onclick="appendNumber('8')">8</button>
+                <button class="btn number" onclick="appendNumber('9')">9</button>
+                <button class="btn operator" onclick="chooseOperation('-')">-</button>
+                
+                <button class="btn number" onclick="appendNumber('4')">4</button>
+                <button class="btn number" onclick="appendNumber('5')">5</button>
+                <button class="btn number" onclick="appendNumber('6')">6</button>
+                <button class="btn operator" onclick="chooseOperation('+')">+</button>
+                
+                <button class="btn number" onclick="appendNumber('1')">1</button>
+                <button class="btn number" onclick="appendNumber('2')">2</button>
+                <button class="btn number" onclick="appendNumber('3')">3</button>
+                <button class="btn equals" onclick="compute()">=</button>
+                
+                <button class="btn number zero" onclick="appendNumber('0')">0</button>
+                <button class="btn number" onclick="appendDecimal()">.</button>
+                <button class="btn operator" onclick="toggleSign()">±</button>
+                <button class="btn operator" onclick="calculatePercentage()">%</button>
+            </div>
+        </div>
+        
+        <div class="status-bar">
+            <span class="status-text" id="status-text">Listo</span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
